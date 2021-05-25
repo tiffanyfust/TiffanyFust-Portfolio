@@ -65,3 +65,7 @@ h2 {
 a {
     color: #FFF;
 }
+
+a:hover {
+    color: rgb(122, 80, 150);
+}
