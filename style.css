@@ -67,8 +67,18 @@ h2 {
 
 a {
     color: #FFF;
+    
 }
 
 a:hover {
     color: rgb(122, 80, 150);
+    transition: color 300ms;
+}
+
+li {
+    transition: transform 300ms;
+}
+
+li:hover {
+    transform: translateY(-3px);
 }
