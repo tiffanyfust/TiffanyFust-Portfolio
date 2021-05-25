@@ -50,4 +50,18 @@ h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     letter-spacing: 19.5px;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.social-links {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    width: 25%;
+    justify-content: space-between;
+}
+
+a {
+    color: #FFF;
 }
