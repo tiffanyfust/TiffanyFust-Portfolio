@@ -34,10 +34,13 @@ header {
 }
 section {
     color: #553744;
-    float: right;
     display: block;
     right: 0;
     color: #FFF;
+}
+
+h1, h2 {
+    cursor: default;
 }
 
 
