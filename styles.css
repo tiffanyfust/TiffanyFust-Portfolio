@@ -55,16 +55,26 @@ h2 {
 				  1px 1px 0 #7a7a7a,
 				 1px -1px 0 #7a7a7a,
                  -1px -1px 0 #7a7a7a;
+                 cursor:default;
 }
 
 h3 {
     font-size: 3rem;
+    cursor:default;
 }
 
 h2,
 h3,
 p {
     margin: 0;
+}
+
+h3 {
+    letter-spacing: 2px;
+}
+
+p {
+    letter-spacing: 1px;
 }
 
 ul {
@@ -146,6 +156,19 @@ h1 {
     margin: 0;
     font-size: 15rem;
     z-index: 1;
+    animation: slideText .5s ease-out 1;
+}
+
+@keyframes slideText {
+    0% {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 h1 span,
@@ -156,6 +179,7 @@ h1 span,
 .headerText p{
     color: #7a7a7a;
     font-size: 2rem;
+    animation: slideText .5s ease-out 1;
 }
 
 .headerImg {
@@ -167,12 +191,14 @@ h1 span,
 @keyframes slide {
     0% {
         transform: translateX(500px);
+        opacity: 0;
     }
 
     100% {
         transform: translateX(0);
+        opacity: 1;
     }
-  }
+}
 
 .headerImg img {
     width: 100%;
@@ -198,7 +224,7 @@ h1 span,
     100% {
         transform: translateY(5px);
     }
-  }
+}
 
 /* About styling */
 
@@ -221,16 +247,29 @@ h1 span,
 }
 
 .projectList {
+    position: relative;
     width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .project {
-    width: 100%;
+    display: flex;
+    position: relative;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin: 0 6vw;
+
 }
 
 .projectDescription {
-    width: 50%;
+    width: 100%;
     font-size: 2rem;
+    transform: translateZ(-200px);
 }
 
 /* Skills styling */
@@ -318,6 +357,15 @@ textarea {
 }
 
 button {
+    background-color: #222222;
+    color: #fef7f7;
+    font-family: "Grifter", Arial, sans-serif;
+    transition: background-color .1s ease-in;
+}
+
+button:hover,
+button:focus {
+    cursor: pointer;
     background-color: #e83622;
 }
 
