@@ -58,6 +58,10 @@ h2 {
     margin: 0;
 }
 
+h3 {
+    font-size: 3rem;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -66,6 +70,10 @@ ul {
 
 li {
     list-style-type: none;
+}
+
+i {
+    font-size: 5rem;
 }
 
 a {
@@ -178,6 +186,23 @@ h1 span,
 
 /* Portfolio Styling */
 
+.portfolio {
+    height: 100vh;
+}
+
 .projectList {
-    flex-wrap: wrap;
+    width: 100%;
+}
+
+.project {
+    width: 100%;
+}
+
+.projectDescription {
+    width: 50%;
+    font-size: 2rem;
+}
+
+.imgContainer {
+    width: 10%;
 }
