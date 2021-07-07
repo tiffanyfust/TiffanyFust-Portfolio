@@ -161,7 +161,18 @@ h1 span,
 .headerImg {
     margin-left: -50px;
     width: 30%;
+    animation: slide .5s ease-out 1;
 }
+
+@keyframes slide {
+    0% {
+        transform: translateX(500px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+  }
 
 .headerImg img {
     width: 100%;
@@ -172,7 +183,22 @@ h1 span,
     display: flex;
     justify-content: center;
     width: 100%;
+    animation: bounce 1s linear infinite;
 }
+
+@keyframes bounce {
+    0% {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
+  }
 
 /* About styling */
 
@@ -220,7 +246,8 @@ h1 span,
 }
 
 .skillsList li {
-    margin-right: 20px;
+    margin-right: 30px;
+    margin-top: 15px;
 }
 
 .skillsList li:last-child {
@@ -307,6 +334,10 @@ button {
     align-items: flex-end;
     font-size: 2rem;
     margin-bottom: 30px;
+}
+
+.footerMenu li {
+    margin-bottom: 10px;
 }
 
 .socialLinks {
