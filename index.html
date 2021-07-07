@@ -18,7 +18,7 @@
                 </a>
                 <ul class="menuContainer">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#work">Work</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -46,7 +46,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo officiis voluptates dolore ad amet nemo illum sed. Quibusdam, unde ea laborum quas beatae blanditiis tempora, dicta, minima animi nisi atque.</p>
                 </div>
             </section>
-            <section class="portfolio">
+            <section class="portfolio" id="portfolio">
                 <h2>Portfolio</h2>
                 <ul class="projectList">
                     <li class="project">
@@ -102,31 +102,61 @@
                     <li><i class="fab fa-react"></i></li>
                     <li><i class="icon-jquery"></i></li>
                     <li><i class="fab fa-sass"></i></li>
-                    <li>
+                    <!-- <li>
                         <div class="imgContainer">
                             <img src="assets/firebase.png"/>
                         </div>
-                    </li>
+                    </li> -->
                     <li><i class="fab fa-github"></i></li>
                     <li><i class="fab fa-git"></i></li>
                 </ul>
             </section>
+        </main>
+    
+        <footer>
             <section class="contact">
                 <h2>Get in Touch!</h2>
-                <form>
-                    <input type="text" placeholder="What's your name?">
-                    <input type="email" placeholder="What's your Email?">
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="What can I do for you?"></textarea>
-                    <button type="submit">Send!</button>
-                </form>
+                <div class="contactContainer">
+                    <div class="emailContainer">
+                        <div class="email">
+                            <h3>Email me at:</h3>
+                            <p>tiffanyfust@gmail.com</p>
+                        </div>
+                        <div class="formContainer">
+                            <h3>or send me a message:</h3>
+                            <form class="contactForm">
+                                <input type="text" placeholder="What's your name?">
+                                <input type="email" placeholder="What's your Email?">
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="What can I do for you?"></textarea>
+                                <button type="submit">Send!</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="socialContainer">
+                        <ul class="footerMenu">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                        <ul class="socialLinks">
+                            <li><i class="fab fa-linkedin"></i></li>
+                            <li><i class="fab fa-github"></i></li>
+                            <li><i class="fas fa-bullhorn"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>Developed by Tiffany Fust &copy Copyright 2021</p>
+                </div>
+                <div class="creditsContainer" id="credits">
+                    <h4>Free Resource Credits:</h4>
+                    <ul class="credits">
+                        <li><a target="_blank" href="https://icons8.com/icon/EtZNqCNrTgbD/move-down">Move Down</a> icon by <a target="_blank" href="https://icons8.com"> Icons8</a></li>
+                    </ul>
+                </div>
             </section>
-        </main>
+        </footer>
     </div>
-    <footer>
-        <a href="credits"></a>
-        <ul>
-            <li><a target="_blank" href="https://icons8.com/icon/EtZNqCNrTgbD/move-down">Move Down</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></li>
-        </ul>
-    </footer>
 </body>
 </html>
