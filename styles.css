@@ -55,17 +55,18 @@ h2 {
 				  1px 1px 0 #7a7a7a,
 				 1px -1px 0 #7a7a7a,
                  -1px -1px 0 #7a7a7a;
-                 cursor:default;
-}
-
-h3 {
-    font-size: 3rem;
     cursor:default;
 }
 
+h3 {
+    cursor: default;
+}
+
+h1,
 h2,
 h3,
-p {
+p,
+ul {
     margin: 0;
 }
 
@@ -78,7 +79,6 @@ p {
 }
 
 ul {
-    margin: 0;
     padding: 0;
     display: flex;
 }
@@ -87,18 +87,26 @@ li {
     list-style-type: none;
 }
 
-i {
+i,
+.portfolio a {
     font-size: 5rem;
 }
 
 a {
     position: relative;
-    color: #7a7a7a;
     text-decoration: none;
 }
 
+a,
+nav i,
+.headerText p,
+.skillsList p {
+    color: #7a7a7a;
+}
+
 a:hover,
-a:focus {
+a:focus,
+.socialLinks li:hover {
     color: #e83622;
 }
 
@@ -113,8 +121,41 @@ a::after {
 }
 
 a:hover::after,
-a:focus::after {
+a:focus::after,
+.headerImg img,
+.downIcon,
+.projectList,
+.projectImg,
+.projectImg img,
+.copyright,
+.creditsContainer,
+.creditsContainer li {
     width: 100%;
+}
+
+/* font sizes */
+
+.info i {
+    font-size: 4rem;
+}
+
+nav,
+.headerText p,
+.info a,
+.contactForm,
+.footerMenu {
+    font-size: 2rem;
+}
+
+.bio,
+.email {
+    font-size: 2.5rem;
+}
+
+h3,
+nav i,
+.socialLinks i {
+    font-size: 3rem;
 }
 
 
@@ -124,18 +165,17 @@ nav {
     display: flex;
     justify-content: space-between;
     margin: 40px 60px 0 60px;
-    font-size: 1.9rem;
 }
 
-nav i {
-    font-size: 3rem;
-}
-
-.menuContainer li {
+.menuContainer li,
+.skillsList li,
+.socialLinks li {
     margin-right: 30px;
 }
 
-.menuContainer li:last-child {
+.menuContainer li:last-child,
+.skillsList li:last-child,
+.socialLinks li:last-child {
     margin-right: 0;
 }
 
@@ -143,17 +183,15 @@ nav i {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-
     height: calc(100vh - 70px);
 }
 
 .headerText {
-    width: 50%;
+    width: 60%;
 }
 
 h1 {
     position: relative;
-    margin: 0;
     font-size: 15rem;
     z-index: 1;
     animation: slideText .5s ease-out 1;
@@ -177,13 +215,11 @@ h1 span,
 }
 
 .headerText p{
-    color: #7a7a7a;
-    font-size: 2rem;
     animation: slideText .5s ease-out 1;
 }
 
 .headerImg {
-    margin-left: -50px;
+    margin-left: -170px;
     width: 30%;
     animation: slide .5s ease-out 1;
 }
@@ -201,14 +237,12 @@ h1 span,
 }
 
 .headerImg img {
-    width: 100%;
     border-radius: 10px;
 }
 
 .downIcon {
     display: flex;
     justify-content: center;
-    width: 100%;
     animation: bounce 1s linear infinite;
 }
 
@@ -236,7 +270,6 @@ h1 span,
 
 .bio {
     width: 40%;
-    font-size: 2.5rem;
 }
 
 
@@ -248,28 +281,28 @@ h1 span,
     height: 100vh;
 }
 
-.portfolio a {
-    font-size: 5rem;
-}
-
 .prev {
     left: -100px;
-    top: 500px;
+    top: 400px;
     z-index: 1;
 }
 
 .next {
     left: 1400px;
-    top: 430px;
+    top: 330px;
     z-index: 1;
 }
 
 .projectList {
     position: relative;
-    width: 100%;
     height: 100%;
     justify-content: center;
     overflow: hidden;
+}
+
+.project {
+    border: 20px solid #222222;
+    background-color: #222222;
 }
 
 .hide {
@@ -285,16 +318,19 @@ h1 span,
 .nextSlide,
 .prevSlide {
     position: absolute;
-    width: 50%;
-    opacity: .2;
+    opacity: .1;
+    width: 100%;
+    transform: scale(.6);
 }
 
 .nextSlide {
-    margin-right: -120%;
+    margin-right: -170%;
+    transform-origin: top left;
 }
 
 .prevSlide {
-    margin-left: -120%;
+    margin-left: -170%;
+    transform-origin: top right;
 }
 
 .portfolio a:hover {
@@ -307,16 +343,7 @@ h1 span,
     transition: none;
 }
 
-.projectImg {
-    width: 100%;
-}
-
-.projectImg img {
-    width: 100%;
-}
-
 .projectDescription {
-    margin-top: 20px;
     display: flex;
     font-size: 1.8rem;
 }
@@ -325,6 +352,7 @@ h1 span,
     flex: 2;
 }
 
+.projectDescription,
 .projectText p {
     margin-top: 20px;
 }
@@ -334,14 +362,11 @@ h1 span,
     flex-direction: column;
     flex: 1;
     align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .info li {
     margin-right: 10px;
-}
-
-.info a {
-    font-size: 2rem;
 }
 
 
@@ -358,12 +383,39 @@ h1 span,
 }
 
 .skillsList li {
-    margin-right: 30px;
     margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
 }
 
-.skillsList li:last-child {
-    margin-right: 0;
+.skillsList p {
+    opacity: 0;
+    cursor: default;
+}
+
+.skillsList li:hover p {
+    opacity: 1;
+}
+
+.skillsList li:hover i {
+    animation: bounce .8s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+     
+    100% {
+        transform:translateY(-15px)
+    }
 }
 
 
@@ -389,7 +441,6 @@ h1 span,
 }
 
 .email {
-    font-size: 2.5rem;
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
@@ -404,7 +455,6 @@ h1 span,
     grid-template-columns: 2;
     grid-template-rows: 3;
     gap: 40px;
-    font-size: 2rem;
 }
 
 input[type="text"],
@@ -427,6 +477,7 @@ input[type="email"] {
 
 textarea {
     grid-column: 1/3;
+    resize: none;
 }
 
 button {
@@ -453,7 +504,6 @@ button:focus {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    font-size: 2rem;
     margin-bottom: 30px;
 }
 
@@ -466,41 +516,142 @@ button:focus {
     justify-content: flex-end;
 }
 
-.socialLinks li {
-    margin-right: 40px;
-}
-
-.socialLinks i {
-    font-size: 3.5rem;
-}
-
 .socialLinks li:hover {
-    color: #e83622;
     cursor: pointer;
-}
-
-.socialLinks li:last-child {
-    margin-right: 0;
 }
 
 .copyright {
     margin-top: 40px;
     padding: 40px 40px 40px 0;
-    width: 100%;
     font-size: 1.5rem;
 }
 
 .creditsContainer {
     display: none;
     flex-direction: column;
-    width: 100%;
     font-size: 1.5rem;
-}
-
-.creditsContainer li {
-    width: 100%;
 }
 
 .creditsContainer a {
     display: inline-block;
 }
+
+
+@media (max-width: 1700px) {
+    .wrapper {
+        max-width: 1100px;
+    }
+
+    .headerImg {
+        margin-left: -50px;
+    }
+
+    .current {
+        width: 70%;
+    }
+
+    .nextSlide {
+        margin-right: -180%;
+    }
+
+    .prevSlide {
+        margin-left: -180%;
+    }
+
+    .next {
+        left: 1200px;
+    }
+
+}
+
+@media (max-width: 1500px) {
+    .wrapper {
+        max-width: 1000px;
+    }
+
+    .headerText {
+        width: 50%;
+    }
+
+    .headerText p {
+        position: absolute;
+        margin-left: 40px;
+        top: 400px;
+    }
+
+    .headerImg {
+        margin-left: 100px;
+        width: 35%;
+    }
+
+    .bio {
+        width: 50%;
+        font-size: 2rem;
+    }
+
+    .prev {
+        left: -70px;
+    }
+
+    .next {
+        left: 1050px;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .skillsList {
+        margin-top: 40px;
+    }
+}
+
+
+@media (max-width: 1250px) {
+
+    .headerContent {
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 12rem;
+    }
+
+    h1 span {
+        margin-left: 300px;
+    }
+
+    .headerImg {
+        margin-left: -10px;
+    }
+
+    .current {
+        width: 80%;
+    }
+
+    .prevSlide,
+    .nextSlide {
+        opacity: 0;
+    }
+
+    .prev {
+        left: 30px;
+    }
+
+    .next {
+        left: 940px;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .wrapper {
+        margin: 0 40px 0 40px;
+    }
+
+    .next {
+        left: 920px;
+    }
+}
+
+
