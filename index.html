@@ -7,21 +7,20 @@
     <script src="https://kit.fontawesome.com/6b2d823dd3.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="./assets/font-mfizz-2.4.1/font-mfizz.css">
-    <link rel="stylesheet" href="./assets/GRIFTER™+Bold.otf">
     <link rel="stylesheet" href="styles.css">
-    <title>Tiff's Portfolio</title>
+    <title>Tiffany Fust</title>
 </head>
 <body>
         <header>
             <nav>
-                <a href="/index.html">
+                <div>
                     <i class="fas fa-terminal"></i>
-                </a>
+                </div>
                 <ul class="menuContainer">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about" tabindex="1">About</a></li>
+                    <li><a href="#portfolio" tabindex="2">Portfolio</a></li>
+                    <li><a href="#skills" tabindex="3">Skills</a></li>
+                    <li><a href="#contact" tabindex="4">Contact</a></li>
                 </ul>
             </nav>
             <div class="wrapper">
@@ -41,30 +40,32 @@
         </header>
     <div class="wrapper">
         <main>
-            <section class="about" id="about">
+            <section class="about" id="about" tabindex="5">
                 <h2>About</h2>
                 <div class="bio">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo officiis voluptates dolore ad amet nemo illum sed. Quibusdam, unde ea laborum quas beatae blanditiis tempora, dicta, minima animi nisi atque.</p>
+                    <p>Hi I'm Tiff, your next Front-End Developer!</p>
+                    <p>I have a variety of skills in my Toolkit but using Vanilla Javascript is still my favourite. Along with my technical skills I bring a high attention to detail that developed through my love for creating Art.</p>
+                    <p>If I stop working please re-fuel with a cup of coffee.</p>
                 </div>
             </section>
 
             <section class="portfolio" id="portfolio">
                 <h2>Portfolio</h2>
-                <a class="prev" onclick="prevSlide()">&#10094;</a>
-                <a class="next" onclick="nextSlide()">&#10095;</a>
+                <a class="prev" onclick="prevSlide()" onkeypress="handlePrev(event)" tabindex="6">&#10094;</a>
+                <a class="next" onclick="nextSlide()" onkeypress="handleNext(event)" tabindex="9">&#10095;</a>
                 <ul class="projectList" id="projectList">
-                    <li class="project prevSlide">
+                    <li class="project current">                   
                         <div class="projectImg">
                             <img src="./assets/SanctuaryHelpers.JPG" alt="Sanctuary Helpers Project Image">
                         </div>
                         <div class="projectDescription">
                             <div class="projectText">
-                                <h3>Client PSD Conversion</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo veniam ad explicabo veritatis quasi rem possimus, nemo sed unde eveniet dolore architecto quia totam cum consequuntur eum. Qui, eligendi iure?</p>
+                                <h3>Sanctuary Helpers</h3>
+                                <p>Converted a three-page PSD Design into a responsive and accessible Website</p>
                             </div>
                             <div class="info">
-                                <a href="https://sanctuaryhelpers.netlify.app/" target="_blank">View Live</a>
-                                <a href="https://github.com/tiffanyfust/tiffany-fust-project1" target="_blank">View on GitHub</a>
+                                <a href="https://sanctuaryhelpers.netlify.app/" target="_blank" tabindex="7">View Live</a>
+                                <a href="https://github.com/tiffanyfust/tiffany-fust-project1" target="_blank" tabindex="8">View on GitHub</a>
                                 <ul>
                                     <li><i class="fab fa-html5"></i></li>
                                     <li><i class="fab fa-css3-alt"></i></li>
@@ -73,14 +74,14 @@
                             </div>
                         </div>
                     </li>
-                    <li class="project current">
+                    <li class="project nextSlide">
                         <div class="projectImg">
                             <img src="./assets/FindEvents.JPG" alt="Find Events App Project Image">
                         </div>
                         <div class="projectDescription">
                             <div class="projectText">
-                                <h3>Trip Event Finder</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo veniam ad explicabo veritatis quasi rem possimus, nemo sed unde eveniet dolore architecto quia totam cum consequuntur eum. Qui, eligendi iure?</p>
+                                <h3>Trip Event Finder using an API</h3>
+                                <p>Designed and Developed a responsive Web Application that finds Events based on Location and Date of your Trip using the Ticketmaster API</p>
                             </div>
                             <div class="info">
                                 <a href="https://findevents.netlify.app/" target="_blank">View Live</a>
@@ -94,18 +95,18 @@
                             </div>
                         </div>
                     </li>
-                    <li class="project nextSlide">
+                    <li class="project hide">
                         <div class="projectImg">
                             <img src="./assets/BootcampDiaries.JPG" alt="Bootcamp Diaries Project Image">
                         </div>
                         <div class="projectDescription">
                             <div class="projectText">
                                 <h3>Focus Promoting Writing App</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo veniam ad explicabo veritatis quasi rem possimus, nemo sed unde eveniet dolore architecto quia totam cum consequuntur eum. Qui, eligendi iure?</p>
+                                <p>Collaborated with my team to create a clean minimalistic React writing Application that promotes focus and sparks creativity using promts</p>
                             </div>
                             <div class="info">
-                                <a href="https://bootcamp-diaries.netlify.app/" target="_blank">View Live</a>
-                                <a href="https://github.com/tiffanyfust/find-events-app" target="_blank">View on GitHub</a>
+                                <a href="https://bootcampdiaries.netlify.app/" target="_blank">View Live</a>
+                                <a href="https://github.com/tiffanyfust/BootcampDiaries" target="_blank">View on GitHub</a>
                                 <ul>
                                     <li><i class="fab fa-html5"></i></li>
                                     <li><i class="fab fa-css3-alt"></i></li>
@@ -143,11 +144,11 @@
                         <div class="projectDescription">
                             <div class="projectText">
                                 <h3>Balloon Popping Game</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo veniam ad explicabo veritatis quasi rem possimus, nemo sed unde eveniet dolore architecto quia totam cum consequuntur eum. Qui, eligendi iure?</p>
+                                <p>Designed and Developed a fun, minimal game that mimics the classic fair balloon popping game</p>
                             </div>
                             <div class="info">
-                                <a href="https://kind-euclid-10a87e.netlify.app/" target="_blank">View Live</a>
-                                <a href="https://github.com/tiffanyfust/find-events-app" target="_blank">View on GitHub</a>
+                                <a href="https://balloon-popper.netlify.app/" target="_blank">View Live</a>
+                                <a href="https://github.com/tiffanyfust/BalloonPop" target="_blank">View on GitHub</a>
                                 <ul>
                                     <li><i class="fab fa-html5"></i></li>
                                     <li><i class="fab fa-css3-alt"></i></li>
@@ -161,19 +162,43 @@
             <section class="skills" id="skills">
                 <h2>Skills</h2>
                 <ul class="skillsList">
-                    <li><i class="fab fa-html5"></i></li>
-                    <li><i class="fab fa-css3-alt"></i></li>
-                    <li><i class="fab fa-js"></i></li>
-                    <li><i class="fab fa-react"></i></li>
-                    <li><i class="icon-jquery"></i></li>
-                    <li><i class="fab fa-sass"></i></li>
+                    <li>
+                        <i class="fab fa-html5"></i>
+                        <p>HTML5</p>
+                    </li>
+                    <li>
+                        <i class="fab fa-css3-alt"></i>
+                        <p>CSS3</p>
+                    </li>
+                    <li>
+                        <i class="fab fa-js"></i>
+                        <p>Javascript</p>
+                    </li>
+                    <li>
+                        <i class="fab fa-react"></i>
+                        <p>React</p>
+                    </li>
+                    <li>
+                        <i class="icon-jquery"></i>
+                        <p>jQuery</p>
+                    </li>
+                    <li>
+                        <i class="fab fa-sass"></i>
+                        <p>Sass</p>
+                    </li>
                     <!-- <li>
                         <div class="imgContainer">
                             <img src="assets/firebase.png"/>
                         </div>
                     </li> -->
-                    <li><i class="fab fa-github"></i></li>
-                    <li><i class="fab fa-git"></i></li>
+                    <li>
+                        <i class="fab fa-github"></i>
+                        <p>GitHub</p>
+                    </li>
+                    <li>
+                        <i class="fab fa-git"></i>
+                        <p>Git</p>
+                    </li>
                 </ul>
             </section>
         </main>
@@ -189,9 +214,11 @@
                         </div>
                         <div class="formContainer">
                             <h3>or send me a message:</h3>
-                            <form class="contactForm">
-                                <input type="text" placeholder="What's your name?">
-                                <input type="email" placeholder="What's your Email?">
+                            <form class="contactForm" name="contactForm" method="POST" data-netlify="true">
+                                <label for="name" class="sr-only">Name:</label>
+                                <input type="text" name="name" id="name" placeholder="What's your name?">
+                                <label for="email" class="sr-only">Email:</label>
+                                <input type="email" name="email" id="email" placeholder="What's your Email?">
                                 <textarea name="message" id="message" cols="30" rows="10" placeholder="What can I do for you?"></textarea>
                                 <button type="submit">Send!</button>
                             </form>
@@ -207,7 +234,7 @@
                         <ul class="socialLinks">
                             <li><a href="https://www.linkedin.com/in/tiffany-fust/" title="Tiff's LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                             <li><a href="https://github.com/tiffanyfust" title="Tiff's GitHub" target="_blank"><i class="fab fa-github"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/tiffany-fust/" title="Free Resource Credits" target="_blank"><i class="fas fa-bullhorn"></i></a></li>
+                            <li><a title="Free Resource Credits" target="_blank" onclick="displayCredits()" onkeypress="handleDisplay(event)"><i class="fas fa-bullhorn"></i></a></li>
                         </ul>
                     </div>
                 </div>
