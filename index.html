@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/6b2d823dd3.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="./assets/font-mfizz-2.4.1/font-mfizz.css">
     <link rel="stylesheet" href="./assets/GRIFTER™+Bold.otf">
     <link rel="stylesheet" href="styles.css">
@@ -46,49 +47,113 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo officiis voluptates dolore ad amet nemo illum sed. Quibusdam, unde ea laborum quas beatae blanditiis tempora, dicta, minima animi nisi atque.</p>
                 </div>
             </section>
+
             <section class="portfolio" id="portfolio">
                 <h2>Portfolio</h2>
-                <ul class="projectList">
-                    <li class="project">
+                <a class="prev" onclick="prevSlide()">&#10094;</a>
+                <a class="next" onclick="nextSlide()">&#10095;</a>
+                <ul class="projectList" id="projectList">
+                    <li class="project prevSlide">
                         <div class="projectImg">
-                            <img src="https://placekitten.com/g/600/400" alt="">
+                            <img src="./assets/SanctuaryHelpers.JPG" alt="Sanctuary Helpers Project Image">
                         </div>
                         <div class="projectDescription">
-                            <h3>Project 1</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo veniam ad explicabo veritatis quasi rem possimus, nemo sed unde eveniet dolore architecto quia totam cum consequuntur eum. Qui, eligendi iure?</p>
-                            <ul>
-                                <li><i class="fab fa-html5"></i></li>
-                                <li><i class="fab fa-css3-alt"></i></li>
-                                <li><i class="fab fa-js"></i></li>
-                            </ul>
+                            <div class="projectText">
+                                <h3>Client PSD Conversion</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo veniam ad explicabo veritatis quasi rem possimus, nemo sed unde eveniet dolore architecto quia totam cum consequuntur eum. Qui, eligendi iure?</p>
+                            </div>
+                            <div class="info">
+                                <a href="https://sanctuaryhelpers.netlify.app/" target="_blank">View Live</a>
+                                <a href="https://github.com/tiffanyfust/tiffany-fust-project1" target="_blank">View on GitHub</a>
+                                <ul>
+                                    <li><i class="fab fa-html5"></i></li>
+                                    <li><i class="fab fa-css3-alt"></i></li>
+                                    <li><i class="fab fa-sass"></i></li>
+                                </ul>
+                            </div>
                         </div>
                     </li>
-                    <li class="project">
+                    <li class="project current">
                         <div class="projectImg">
-                            <img src="https://placekitten.com/g/600/400" alt="">
+                            <img src="./assets/FindEvents.JPG" alt="Find Events App Project Image">
                         </div>
                         <div class="projectDescription">
-                            <h3>Project 2</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo veniam ad explicabo veritatis quasi rem possimus, nemo sed unde eveniet dolore architecto quia totam cum consequuntur eum. Qui, eligendi iure?</p>
-                            <ul>
-                                <li><i class="fab fa-html5"></i></li>
-                                <li><i class="fab fa-css3-alt"></i></li>
-                                <li><i class="fab fa-js"></i></li>
-                            </ul>
+                            <div class="projectText">
+                                <h3>Trip Event Finder</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo veniam ad explicabo veritatis quasi rem possimus, nemo sed unde eveniet dolore architecto quia totam cum consequuntur eum. Qui, eligendi iure?</p>
+                            </div>
+                            <div class="info">
+                                <a href="https://findevents.netlify.app/" target="_blank">View Live</a>
+                                <a href="https://github.com/tiffanyfust/find-events-app" target="_blank">View on GitHub</a>
+                                <ul>
+                                    <li><i class="fab fa-html5"></i></li>
+                                    <li><i class="fab fa-css3-alt"></i></li>
+                                    <li><i class="fab fa-sass"></i></li>
+                                    <li><i class="fab fa-js"></i></li>
+                                </ul>
+                            </div>
                         </div>
                     </li>
-                    <li class="project">
+                    <li class="project nextSlide">
                         <div class="projectImg">
-                            <img src="https://placekitten.com/g/600/400" alt="">
+                            <img src="./assets/BootcampDiaries.JPG" alt="Bootcamp Diaries Project Image">
                         </div>
                         <div class="projectDescription">
-                            <h3>Project 3</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo veniam ad explicabo veritatis quasi rem possimus, nemo sed unde eveniet dolore architecto quia totam cum consequuntur eum. Qui, eligendi iure?</p>
-                            <ul>
-                                <li><i class="fab fa-html5"></i></li>
-                                <li><i class="fab fa-css3-alt"></i></li>
-                                <li><i class="fab fa-js"></i></li>
-                            </ul>
+                            <div class="projectText">
+                                <h3>Focus Promoting Writing App</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo veniam ad explicabo veritatis quasi rem possimus, nemo sed unde eveniet dolore architecto quia totam cum consequuntur eum. Qui, eligendi iure?</p>
+                            </div>
+                            <div class="info">
+                                <a href="https://bootcamp-diaries.netlify.app/" target="_blank">View Live</a>
+                                <a href="https://github.com/tiffanyfust/find-events-app" target="_blank">View on GitHub</a>
+                                <ul>
+                                    <li><i class="fab fa-html5"></i></li>
+                                    <li><i class="fab fa-css3-alt"></i></li>
+                                    <li><i class="fab fa-js"></i></li>
+                                    <li><i class="fab fa-react"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project hide">
+                        <div class="projectImg">
+                            <img src="./assets/MealInspiration.JPG" alt="Meal Inspiration Project Image">
+                        </div>
+                        <div class="projectDescription">
+                            <div class="projectText">
+                                <h3>Meal Inspiration</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo veniam ad explicabo veritatis quasi rem possimus, nemo sed unde eveniet dolore architecto quia totam cum consequuntur eum. Qui, eligendi iure?</p>
+                            </div>
+                            <div class="info">
+                                <a href="https://mealspiration.netlify.app/" target="_blank">View Live</a>
+                                <a href="https://github.com/tiffanyfust/TiffanyFustProjectThree" target="_blank">View on GitHub</a>
+                                <ul>
+                                    <li><i class="fab fa-html5"></i></li>
+                                    <li><i class="fab fa-css3-alt"></i></li>
+                                    <li><i class="fab fa-js"></i></li>
+                                    <li><i class="fab fa-react"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project hide">
+                        <div class="projectImg">
+                            <img src="./assets/BalloonPop.JPG" alt="Balloon Popping Game Project Image">
+                        </div>
+                        <div class="projectDescription">
+                            <div class="projectText">
+                                <h3>Balloon Popping Game</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo veniam ad explicabo veritatis quasi rem possimus, nemo sed unde eveniet dolore architecto quia totam cum consequuntur eum. Qui, eligendi iure?</p>
+                            </div>
+                            <div class="info">
+                                <a href="https://kind-euclid-10a87e.netlify.app/" target="_blank">View Live</a>
+                                <a href="https://github.com/tiffanyfust/find-events-app" target="_blank">View on GitHub</a>
+                                <ul>
+                                    <li><i class="fab fa-html5"></i></li>
+                                    <li><i class="fab fa-css3-alt"></i></li>
+                                    <li><i class="fab fa-js"></i></li>
+                                </ul>
+                            </div>
                         </div>
                     </li>
                 </ul>
