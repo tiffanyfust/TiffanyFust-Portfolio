@@ -48,20 +48,21 @@ const nextSlide = () => {
     next.children[1].children[1].children[0].setAttribute('tabindex', '7');
     next.children[1].children[1].children[1].setAttribute('tabindex', '8');
 
-    prev.classList.remove('prevSlide');
-    prev.classList.remove('nextSlide');
-    prev.classList.remove('current');
-    prev.classList.add('hide');
-    prev.children[1].children[1].children[0].setAttribute('tabindex', '-1');
-    prev.children[1].children[1].children[1].setAttribute('tabindex', '-1');
-
-    nextNext.classList.remove('hide');
-    nextNext.classList.remove('prevSlide');
-    nextNext.classList.remove('current');
-    nextNext.classList.add('nextSlide');
-    nextNext.children[1].children[1].children[0].setAttribute('tabindex', '-1');
-    nextNext.children[1].children[1].children[1].setAttribute('tabindex', '-1');
-
+    if (prev !== null) {
+        prev.classList.remove('prevSlide');
+        prev.classList.remove('current');
+        prev.classList.add('hide');
+        prev.children[1].children[1].children[0].setAttribute('tabindex', '-1');
+        prev.children[1].children[1].children[1].setAttribute('tabindex', '-1');
+    }
+    if (nextNext !== null) {
+        nextNext.classList.remove('hide');
+        nextNext.classList.remove('prevSlide');
+        nextNext.classList.remove('current');
+        nextNext.classList.add('nextSlide');
+        nextNext.children[1].children[1].children[0].setAttribute('tabindex', '-1');
+        nextNext.children[1].children[1].children[1].setAttribute('tabindex', '-1');
+    }
 }
 
 const prevSlide = () => {
@@ -93,31 +94,33 @@ const prevSlide = () => {
     prev.children[1].children[1].children[0].setAttribute('tabindex', '7');
     prev.children[1].children[1].children[1].setAttribute('tabindex', '8');
 
-    next.classList.remove('nextSlide');
-    next.classList.remove('prevSlide');
-    next.classList.remove('current');
-    next.classList.add('hide');
-    next.children[1].children[1].children[0].setAttribute('tabindex', '-1');
-    next.children[1].children[1].children[1].setAttribute('tabindex', '-1');
-
-    prevPrev.classList.remove('hide');
-    prevPrev.classList.remove('nextSlide');
-    prevPrev.classList.remove('current');
-    prevPrev.classList.add('prevSlide');
-    prevPrev.children[1].children[1].children[0].setAttribute('tabindex', '-1');
-    prevPrev.children[1].children[1].children[1].setAttribute('tabindex', '-1');
+    if (next !== null) {
+        next.classList.remove('nextSlide');
+        next.classList.remove('prevSlide');
+        next.classList.remove('current');
+        next.classList.add('hide');
+        next.children[1].children[1].children[0].setAttribute('tabindex', '-1');
+        next.children[1].children[1].children[1].setAttribute('tabindex', '-1');
+    }
+    
+    if (prevPrev !== null) {
+        prevPrev.classList.remove('hide');
+        prevPrev.classList.remove('nextSlide');
+        prevPrev.classList.remove('current');
+        prevPrev.classList.add('prevSlide');
+        prevPrev.children[1].children[1].children[0].setAttribute('tabindex', '-1');
+        prevPrev.children[1].children[1].children[1].setAttribute('tabindex', '-1');
+    }
 }
 
+const credits = document.querySelector('.creditsContainer');
+
+function toggleCredits() {
+    credits.classList.toggle('toggleCredits');
+}
 
 const displayCredits = () => {
-    const credits = document.querySelector('.creditsContainer');
-
-    if (credits.style.display !== 'none') {
-        credits.style.display = 'none';
-    }
-    else {
-        credits.style.display = 'flex';
-    }
+    toggleCredits();
 }
 
 const menuBtn = document.querySelector('.menuBtn');
