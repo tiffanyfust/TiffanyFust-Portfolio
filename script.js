@@ -48,6 +48,13 @@ const nextSlide = () => {
     next.children[1].children[1].children[0].setAttribute('tabindex', '7');
     next.children[1].children[1].children[1].setAttribute('tabindex', '8');
 
+    prev.classList.remove('prevSlide');
+    prev.classList.remove('nextSlide');
+    prev.classList.remove('current');
+    prev.classList.add('hide');
+    prev.children[1].children[1].children[0].setAttribute('tabindex', '-1');
+    prev.children[1].children[1].children[1].setAttribute('tabindex', '-1');
+
     nextNext.classList.remove('hide');
     nextNext.classList.remove('prevSlide');
     nextNext.classList.remove('current');
@@ -55,12 +62,6 @@ const nextSlide = () => {
     nextNext.children[1].children[1].children[0].setAttribute('tabindex', '-1');
     nextNext.children[1].children[1].children[1].setAttribute('tabindex', '-1');
 
-    prev.classList.remove('prevSlide');
-    prev.classList.remove('nextSlide');
-    prev.classList.remove('current');
-    prev.classList.add('hide');
-    prev.children[1].children[1].children[0].setAttribute('tabindex', '-1');
-    prev.children[1].children[1].children[1].setAttribute('tabindex', '-1');
 }
 
 const prevSlide = () => {
