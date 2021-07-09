@@ -281,21 +281,26 @@ h1 span,
     height: 100vh;
 }
 
-.prev {
-    left: -100px;
-    top: 400px;
+
+.prev,
+.next {
+    position: absolute;
+    top: 600px;
     z-index: 1;
 }
 
+.prev {
+    left: -60px;
+}
+
 .next {
-    left: 1400px;
-    top: 330px;
-    z-index: 1;
+    right: -60px;
 }
 
 .projectList {
     position: relative;
     height: 100%;
+    margin-top: 100px;
     justify-content: center;
     overflow: hidden;
 }
@@ -558,9 +563,7 @@ button:focus {
         margin-left: -180%;
     }
 
-    .next {
-        left: 1200px;
-    }
+
 
 }
 
@@ -589,13 +592,7 @@ button:focus {
         font-size: 2rem;
     }
 
-    .prev {
-        left: -70px;
-    }
 
-    .next {
-        left: 1050px;
-    }
 
     .skills {
         flex-direction: column;
@@ -635,11 +632,11 @@ button:focus {
     }
 
     .prev {
-        left: 30px;
+        left: 20px;
     }
-
+    
     .next {
-        left: 940px;
+        right: 20px;
     }
 
 }
@@ -649,8 +646,89 @@ button:focus {
         margin: 0 40px 0 40px;
     }
 
+    h1 {
+        font-size: 10rem;
+    }
+
+    h1 span {
+        margin-left: 300px;
+    }
+    
+    .headerText p {
+        margin-left: 20px;
+        margin-top: -10px;
+    }
+
+    .contact h3 {
+        font-size: 1.7rem;
+    }
+
+    .email {
+        font-size: 2.2rem;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    h1 {
+        font-size: 8rem;
+    }
+
+    h1 span {
+        margin-left: 200px;
+    }
+
+    .headerText p {
+        font-size: 2.1rem;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .headerImg {
+        margin-left: 30px;
+    }
+
+    .about,
+    .portfolio,
+    .skills {
+        padding-top: 100px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .bio {
+        margin-top: 50px;
+        align-self: center;
+    }
+
+    .projectList {
+        height: 80vh;
+    }
+
+    .prev,
     .next {
-        left: 920px;
+        top: 480px;
+    }
+
+    .skillsList {
+        flex-wrap: wrap;
+    }
+
+    .contactContainer {
+        flex-direction: column;
+    }
+
+    .footerMenu {
+        margin-top: 50px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .copyright {
+        margin-top: 0;
     }
 }
 
