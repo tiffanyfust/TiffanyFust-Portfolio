@@ -321,7 +321,7 @@ h1 span,
 }
 
 .bio {
-    width: 40%;
+    width: 50%;
 }
 
 
@@ -645,7 +645,6 @@ button:focus {
     }
 
     .bio {
-        width: 50%;
         font-size: 2rem;
     }
 
