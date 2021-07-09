@@ -120,3 +120,23 @@ const displayCredits = () => {
     }
 }
 
+const menuBtn = document.querySelector('.menuBtn');
+const menuContainer = document.querySelector('.menuContainer')
+
+let menuOpen = false;
+
+menuBtn.addEventListener('click', () => {
+    toggleClass();
+    if(!menuOpen) {
+        menuBtn.classList.add('open');
+        menuOpen = true;
+    } else {
+        menuBtn.classList.remove('open');
+        menuOpen = false;
+    }
+});
+
+
+function toggleClass() {
+    menuContainer.classList.toggle('toggleCls');
+}
