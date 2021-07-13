@@ -370,6 +370,7 @@ h1 span,
     position: absolute;
     width: 60%;
     z-index: 1;
+    transition: all 0.3s;
 }
 
 .nextSlide,
@@ -378,6 +379,7 @@ h1 span,
     opacity: .1;
     width: 100%;
     transform: scale(.6);
+    transition: all 0.3s;
 }
 
 .nextSlide {
