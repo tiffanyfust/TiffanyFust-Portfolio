@@ -143,3 +143,7 @@ menuBtn.addEventListener('click', () => {
 function toggleClass() {
     menuContainer.classList.toggle('toggleCls');
 }
+
+const li = document.querySelector('.project');
+
+console.log(li.style.height);

@@ -328,16 +328,15 @@ h1 span,
 /* Portfolio Styling */
 
 .portfolio {
-    padding-top: 200px;
+    padding-top: 100px;
+    margin-top: 100px;
     position: relative;
-    height: 100vh;
 }
-
 
 .prev,
 .next {
     position: absolute;
-    top: 600px;
+    margin-top: 350px;
     z-index: 1;
 }
 
@@ -351,8 +350,8 @@ h1 span,
 
 .projectList {
     position: relative;
-    height: 100%;
     margin-top: 100px;
+    height: 600px;
     justify-content: center;
     overflow: hidden;
 }
@@ -360,6 +359,7 @@ h1 span,
 .project {
     border: 20px solid #222222;
     background-color: #222222;
+    height: min-content;
 }
 
 .hide {
@@ -432,7 +432,8 @@ h1 span,
 .skills {
     display: flex;
     justify-content: space-between;
-    padding-top: 200px;
+    padding-top: 100px;
+    margin-top: 80px;
 }
 
 .skillsList {
@@ -636,7 +637,7 @@ button:focus {
     .headerText p {
         position: absolute;
         margin-left: 40px;
-        top: 400px;
+        margin-top: -130px;
     }
 
     .headerImg {
@@ -712,7 +713,16 @@ button:focus {
     
     .headerText p {
         margin-left: 20px;
-        margin-top: -10px;
+        margin-top: -90px;
+    }
+
+    .skillsList p {
+        margin-top: 10px;
+        opacity: 1;
+    }
+
+    .icon-jquery {
+        font-size: 4.3rem;
     }
 
     .contact h3 {
@@ -765,13 +775,13 @@ button:focus {
     }
 
     .headerText p {
-        font-size: 2.1rem;
+        font-size: 2rem;
         margin-left: 20px;
         margin-top: 20px;
     }
 
     .headerImg {
-        margin-left: 30px;
+        margin-left: -30px;
     }
 
     h2 {
@@ -784,8 +794,9 @@ button:focus {
 
     .about,
     .portfolio,
-    .skills {
-        padding-top: 100px;
+    .skills,
+    .contact {
+        margin-top: 0;
     }
 
     .about {
@@ -795,10 +806,12 @@ button:focus {
     .bio {
         margin-top: 50px;
         align-self: center;
+        width: 70%;
+        font-size: 1.8rem;
     }
 
     .projectList {
-        height: 80vh;
+        height: 470px;
     }
 
     .projectDescription {
@@ -811,7 +824,7 @@ button:focus {
 
     .prev,
     .next {
-        top: 480px;
+        margin-top: 300px;
     }
     
 
@@ -852,6 +865,10 @@ button:focus {
 
 @media (max-width: 700px) {
 
+    .headerText {
+        width: 40%;
+    }
+
     h1 {
         font-size: 6rem;
     }
@@ -861,12 +878,11 @@ button:focus {
     }
 
     .headerImg {
-        margin-left: 10px;
+        margin-left: 20px;
     }
 
     .headerText p {
         font-size: 1.7rem;
-        margin-top: -10px;
         margin-left: 10px;
     }
 
@@ -876,11 +892,6 @@ button:focus {
 
     .contact h3 {
         font-size: 1.5rem;
-    }
-
-    .bio {
-        width: 70%;
-        font-size: 1.8rem;
     }
 
     .projectDescription {
@@ -897,9 +908,9 @@ button:focus {
         margin-top: 20px;
     }
 
-    .next,
-    .prev {
-        top: 200px;
+    .prev,
+    .next {
+        margin-top: 570px;
     }
 
     .next {
@@ -916,6 +927,19 @@ button:focus {
 }
 
 @media (max-width: 600px) {
+
+    .headerImg {
+        margin-left: 60px;
+        width: 40%;
+    }
+    .headerText p {
+        margin-top: 10px;
+    }
+
+    .prev,
+    .next {
+        margin-top: 540px;
+    }
 
     .contactForm {
         display: grid;
@@ -952,7 +976,7 @@ button:focus {
     }
 
     .headerText p {
-        top: 140px;
+        margin-top: -70%;
     }
 
     .headerImg {
@@ -986,6 +1010,12 @@ button:focus {
         left: 100px;
     }
 
+    
+    .prev,
+    .next {
+        margin-top: 520px;
+    }
+
     .skillsList {
         justify-content: flex-start;
     }
@@ -1005,6 +1035,17 @@ button:focus {
 
     h1 span{
         margin-left: 150px;
+    }
+
+    .bio {
+        width: 90%;
+        font-size: 1.5rem;
+        line-height: 1.25;
+    }
+
+    .bio p {
+        letter-spacing: 1.2px;
+        margin-top: 10px;
     }
 
     .project {
