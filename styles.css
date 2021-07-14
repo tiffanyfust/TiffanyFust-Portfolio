@@ -761,18 +761,26 @@ button:focus {
         position: absolute;
         right: 0;
         top: 0;
-        padding-top: 50px;
+        padding-top: 30px;
         padding-left: 40px;
+        padding-bottom: 20px;
         flex-direction: column;
-        height: 30%;
         width: 100%;
         background-color: rgba(34, 34,34, 0.9);
         z-index: 2;
         overflow: hidden;
     }
 
+    .menuContainer li {
+        margin-bottom: 10px;
+    }
+
     .menuContainer.menuContainer.toggleCls a {
         color: #fef7f7;
+    }
+
+    .menuContainer.menuContainer.toggleCls a::after {
+        display: none;
     }
 
     .menuBtn {
@@ -1017,17 +1025,17 @@ button:focus {
     }
 
     .next {
-        right: 100px;
+        right: 50px;
     }
 
     .prev {
-        left: 100px;
+        left: 50px;
     }
 
     
     .prev,
     .next {
-        margin-top: 540px;
+        margin-top: 40px;
     }
 
     .skillsList {
@@ -1037,6 +1045,10 @@ button:focus {
     .skillsList li {
         margin-left: 0;
         margin-right: 20px;
+    }
+
+    .contactForm {
+        gap: 20px;
     }
 
 }
@@ -1070,13 +1082,33 @@ button:focus {
         flex-direction: column;
     }
 
+    .formContainer h3 {
+        margin-bottom: 20px;
+    }
+
     .email {
         flex-direction: column;
+        margin-bottom: 20px;
     }
 
     .email p {
-        margin-top: 10px;
+        margin-top: 15px;
+    }
+
+    .footerMenu {
+        font-size: 1.8rem;
+        flex-wrap: wrap;
+    }
+
+    .footerMenu li {
+        margin-right: 10px;
+    }
+
+    .footerMenu li:last-of-type {
+        margin-right: 0;
     }
 }
+
+
 
 

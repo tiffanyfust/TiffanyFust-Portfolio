@@ -125,10 +125,13 @@ const displayCredits = () => {
 
 const menuBtn = document.querySelector('.menuBtn');
 const menuContainer = document.querySelector('.menuContainer')
+const menuLi = document.querySelectorAll('.menuContainer li')
 
 let menuOpen = false;
 
-menuBtn.addEventListener('click', () => {
+
+const toggleMenu = () => {
+    console.log('I worked');
     toggleClass();
     if(!menuOpen) {
         menuBtn.classList.add('open');
@@ -137,7 +140,10 @@ menuBtn.addEventListener('click', () => {
         menuBtn.classList.remove('open');
         menuOpen = false;
     }
-});
+}
+
+menuBtn.addEventListener('click', toggleMenu);
+menuLi.forEach(item => item.addEventListener('click', toggleMenu))
 
 
 function toggleClass() {
