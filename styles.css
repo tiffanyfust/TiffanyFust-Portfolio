@@ -32,6 +32,9 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
 
 /* General styles */
+video {
+    width: 100%;
+}
 
 html,
 body {
@@ -380,7 +383,7 @@ h1 span,
 
 .current {
     position: absolute;
-    width: 60%;
+    width: 70%;
     z-index: 1;
     transition: all 0.3s;
 }
