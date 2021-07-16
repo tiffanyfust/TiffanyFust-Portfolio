@@ -43,13 +43,13 @@
         </header>
     <div class="wrapper">
         <main>
-            <section class="about" id="about" tabindex="5">
+            <section class="about" id="about">
                 <h2>About</h2>
                 <div class="bio">
                     <p>Hi I'm Tiff, your next Front-End Developer!</p>
                     <p>My interest in tech is as old as me, I have gone from messing with the google homepage to successfully completing Juno's Web Development Bootcamp 🎉</p>
                     <p>My tech stack is completed by my high attention to detail and ability to collaborate that developed through my Art and previous work experience.</p>
-                    <p>You can learn more about my work style by visiting my <a href="https://secure.plum.io/p/Bjotlg-ZHz7AnoJ5qcdibg" class="plumLink" target="_blank">plum assessment.</a> If I ever stop working please re-fuel with a cup of coffee.</p>
+                    <p>You can learn more about my work style by visiting my <a href="https://secure.plum.io/p/Bjotlg-ZHz7AnoJ5qcdibg" class="plumLink" target="_blank" tabindex="5">plum assessment.</a> If I ever stop working please re-fuel with a cup of coffee.</p>
                 </div>
             </section>
 
@@ -218,31 +218,43 @@
                     <div class="emailContainer">
                         <div class="email">
                             <h3>Email me at:</h3>
-                            <p>tiffanyfust@gmail.com</p>
+                            <a href="mailto:tiffanyfust@gmail.com" title="Link to Email" tabindex="10">tiffanyfust@gmail.com</a>
                         </div>
                         <div class="formContainer">
                             <h3>or send me a message:</h3>
                             <form class="contactForm" name="contactForm" method="POST" data-netlify="true">
                                 <label for="name" class="sr-only">Name:</label>
-                                <input type="text" name="name" id="name" placeholder="What's your name?">
+                                <input type="text" name="name" id="name" placeholder="What's your name?" tabindex="11">
                                 <label for="email" class="sr-only">Email:</label>
-                                <input type="email" name="email" id="email" placeholder="What's your Email?">
-                                <textarea name="message" id="message" cols="30" rows="10" placeholder="What can I do for you?"></textarea>
-                                <button type="submit">Send!</button>
+                                <input type="email" name="email" id="email" placeholder="What's your Email?" tabindex="12">
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="What can I do for you?" tabindex="13"></textarea>
+                                <button type="submit" tabindex="13">Send!</button>
                             </form>
                         </div>
                     </div>
                     <div class="socialContainer">
                         <ul class="footerMenu">
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#about" tabindex="14">About</a></li>
+                            <li><a href="#portfolio" tabindex="15">Portfolio</a></li>
+                            <li><a href="#skills" tabindex="16">Skills</a></li>
+                            <li><a href="#contact" tabindex="17">Contact</a></li>
                         </ul>
                         <ul class="socialLinks">
-                            <li><a href="https://www.linkedin.com/in/tiffany-fust/" title="Tiff's LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                            <li><a href="https://github.com/tiffanyfust" title="Tiff's GitHub" target="_blank"><i class="fab fa-github"></i></a></li>
-                            <li><a title="Free Resource Credits" target="_blank" onclick="displayCredits()" onkeypress="handleDisplay(event)"><i class="fas fa-bullhorn"></i></a></li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/tiffany-fust/" title="Tiff's LinkedIn" target="_blank" tabindex="18">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/tiffanyfust" title="Tiff's GitHub" target="_blank" tabindex="19">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a title="Free Resource Credits" target="_blank" onclick="displayCredits()" onkeypress="handleDisplay(event)" tabindex="20">
+                                    <i class="fas fa-bullhorn"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

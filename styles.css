@@ -366,7 +366,7 @@ h1 span,
 .projectList {
     position: relative;
     margin-top: 100px;
-    height: 600px;
+    height: 650px;
     justify-content: center;
     overflow: hidden;
 }
@@ -374,7 +374,6 @@ h1 span,
 .project {
     border: 20px solid #222222;
     background-color: #222222;
-    height: min-content;
 }
 
 .hide {
@@ -521,6 +520,10 @@ h1 span,
     justify-content: space-between;
     margin-bottom: 40px;
 }
+
+/* .email a {
+    color: #fef7f7;
+} */
 
 .formContainer h3 {
     margin-bottom: 40px;

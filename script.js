@@ -19,6 +19,13 @@ function handlePrev(e){
     }
 }
 
+function handleDisplay(e){
+    if(e.keyCode === 13){
+        e.preventDefault(); // Ensure it is only this code that runs
+        displayCredits();   
+    }
+}
+
 const nextSlide = () => {
 
     slideArr.forEach((el) => {
@@ -38,8 +45,8 @@ const nextSlide = () => {
     el.classList.remove('nextSlide');
     el.classList.remove('hide');
     el.classList.add('prevSlide');
-    el.children[1].children[1].children[0].removeAttribute('tabindex');
-    el.children[1].children[1].children[1].removeAttribute('tabindex');
+    el.children[1].children[1].children[0].setAttribute('tabindex', '-1');
+    el.children[1].children[1].children[1].setAttribute('tabindex', '-1');
 
     next.classList.remove('nextSlide');
     next.classList.remove('prevSlide');
@@ -84,8 +91,8 @@ const prevSlide = () => {
     el.classList.remove('prevSlide');
     el.classList.remove('hide');
     el.classList.add('nextSlide');
-    el.children[1].children[1].children[0].removeAttribute('tabindex');
-    el.children[1].children[1].children[1].removeAttribute('tabindex');
+    el.children[1].children[1].children[0].setAttribute('tabindex', '-1');
+    el.children[1].children[1].children[1].setAttribute('tabindex', '-1');
 
     prev.classList.remove('prevSlide');
     prev.classList.remove('nextSlide');
