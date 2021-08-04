@@ -163,9 +163,6 @@ const image = document.querySelectorAll('.projectImage img')
 
 
     function toggleOpen() {
-        // panels.forEach((panel) => {
-        //     panel.classList.remove('open');
-        // })
         this.classList.toggle('open');
     }
 
