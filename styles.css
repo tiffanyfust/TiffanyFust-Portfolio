@@ -1,7 +1,7 @@
 /* Colors:
     Red-- color: #e83622;
-    White-- color: #fef7f7;
-    Grey-- color: #7a7a7a;
+    White-- color: #f3eded;
+    Grey-- color: #8b8888;
     Dark Grey-- color: #222222;
     Black-- color: #151515;
 */
@@ -10,11 +10,13 @@
     font-family: "Grifter", Arial, sans-serif; 
 */
 
-@font-face { font-family: "Grifter"; src: url('./assets/GRIFTER™+Bold.otf') format('embedded-opentype'), /* Internet Explorer */
+@font-face { font-family: "Grifter";
+    src: url('./assets/GRIFTER™+Bold.otf') format('embedded-opentype'), /* Internet Explorer */
     url('./assets/GRIFTER™+Bold.otf') format('woff2'), /* Super Modern Browsers */
     url('./assets/GRIFTER™+Bold.otf') format('woff'), /* Pretty Modern Browsers */
     url('./assets/GRIFTER™+Bold.otf')  format('truetype'), /* Safari, Android, iOS */
     url('./assets/GRIFTER™+Bold.otf') format('svg'); /* Legacy iOS */
+    font-display: swap;
 }
 
 /* Normalize/Reset */
@@ -40,9 +42,8 @@ html,
 body {
     font-family: "Grifter", Arial, sans-serif;
     font-size: 62.5%;
-    font-display: fallback;
     background-color: #151515;
-    color: #fef7f7;
+    color: #f3eded;
     overflow-x: hidden;
 }
 
@@ -65,7 +66,7 @@ body {
 .menuBtnBurger {
     width: 25px;
     height: 4px;
-    background-color: #fef7f7;
+    background-color: #f3eded;
     border-radius: 5px;
     transition: all .5s ease-in-out;
 }
@@ -76,7 +77,7 @@ body {
     position: absolute;
     width: 25px;
     height: 4px;
-    background-color: #fef7f7;
+    background-color: #f3eded;
     border-radius: 5px;
     transition: all .5s ease-in-out;
 }
@@ -106,10 +107,10 @@ h2 {
     text-transform: uppercase;
     font-size: 8rem;
     color: #151515;
-    text-shadow: -1px 1px 0 #7a7a7a,
-                1px 1px 0 #7a7a7a,
-                1px -1px 0 #7a7a7a,
-                -1px -1px 0 #7a7a7a;
+    text-shadow: -1px 1px 0 #8b8888,
+                1px 1px 0 #8b8888,
+                1px -1px 0 #8b8888,
+                -1px -1px 0#8b8888;
     cursor:default;
 }
 
@@ -152,7 +153,7 @@ a,
 nav i,
 .headerText p,
 .skillsList p {
-    color: #7a7a7a;
+    color: #8b8888;
 }
 
 a:hover,
@@ -298,12 +299,19 @@ h1 span,
 
 .headerImg img {
     border-radius: 10px;
+    width: 100%;
+    height: auto;
 }
 
 .downIcon {
     display: flex;
     justify-content: center;
     animation: bounce 1s linear infinite;
+}
+
+.downIcon img {
+    width: 6%;
+    height: auto;
 }
 
 @keyframes bounce {
@@ -359,7 +367,7 @@ h1 span,
 .panel::after {
     content: '';
     width: 100%;
-    background-color: #7a7a7a;
+    background-color: #8b8888;
     height: 1px;
 }
 
@@ -407,7 +415,7 @@ h1 span,
     position: absolute;
     right: 10px;
     margin-top: -200px;
-    outline: 1px solid #7a7a7a;
+    outline: 1px solid #8b8888;
     outline-offset: 20px;
 }
 
@@ -419,7 +427,7 @@ h1 span,
 
 .projectNum {
     font-size: 2rem;
-    color: #7a7a7a;
+    color: #8b8888;
 }
 
 
@@ -556,7 +564,7 @@ button {
     padding: 10px;
     border: none;
     border-radius: 10px;
-    background-color: #fef7f7;
+    background-color: #f3eded;
 }
 
 input[type="text"] {
@@ -574,7 +582,7 @@ textarea {
 
 button {
     background-color: #222222;
-    color: #fef7f7;
+    color: #f3eded;
     font-family: "Grifter", Arial, sans-serif;
     transition: background-color .1s ease-in;
 }
@@ -759,7 +767,13 @@ button:focus {
         margin-left: 100px;
     }
 
+    .panel:hover .projectImage,
+    .panel:focus .projectImage {
+        display: none;
+    }
+
     .panel.open .projectImage {
+        display: flex;
         margin-top: 40px;
     }
 
@@ -797,7 +811,7 @@ button:focus {
     }
 
     .menuContainer.menuContainer.toggleCls a {
-        color: #fef7f7;
+        color: #f3eded;
     }
 
     .menuContainer.menuContainer.toggleCls a::after {
