@@ -34,9 +34,6 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
 
 /* General styles */
-video {
-    width: 100%;
-}
 
 html,
 body {
@@ -50,6 +47,7 @@ body {
 .wrapper {
     max-width: 1300px;
     margin: 0 auto;
+    padding: 50px;
 }
 
 .menuBtn {
@@ -188,7 +186,6 @@ a:focus::after,
 .projectImg,
 .projectImg img,
 .copyright,
-.creditsContainer,
 .creditsContainer li {
     width: 100%;
 }
@@ -244,6 +241,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     height: calc(100vh - 70px);
 }
 
@@ -604,7 +602,6 @@ button:focus {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-bottom: 30px;
 }
 
 .footerMenu li {
@@ -622,14 +619,19 @@ button:focus {
 
 .copyright {
     margin-top: 40px;
-    padding: 40px 40px 40px 0;
     font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .creditsContainer {
     display: none;
-    flex-direction: column;
+    flex-direction: row;
     font-size: 1.5rem;
+}
+
+.creditsContainer h4 {
+    margin: 0 10px 0 0;
 }
 
 .creditsContainer.toggleCredits {
@@ -644,7 +646,7 @@ button:focus {
 @media (max-width: 1700px) {
 
     .headerImg {
-        margin-left: -50px;
+        margin-left: -160px;
     }
 
     .projectHeader h3 {
@@ -654,9 +656,6 @@ button:focus {
 }
 
 @media (max-width: 1500px) {
-    .wrapper {
-        margin: 0 40px 0 40px;
-    }
 
     .headerText {
         width: 50%;
@@ -669,8 +668,8 @@ button:focus {
     }
 
     .headerImg {
-        margin-left: 100px;
-        width: 35%;
+        margin-left: -50px;
+        width: 30%;
     }
 
     .bio {
@@ -702,7 +701,7 @@ button:focus {
     }
 
     .headerImg {
-        margin-left: -10px;
+        margin-left: -80px;
     }
 
     .projectImage {
@@ -732,6 +731,10 @@ button:focus {
     .headerText p {
         margin-left: 20px;
         margin-top: -90px;
+    }
+
+    .headerImg {
+        margin-left: -50px;
     }
 
     .skillsList p {
@@ -782,6 +785,12 @@ button:focus {
         width: 60%;
     }
 
+}
+
+@media (max-width: 970px) {
+    .headerImg {
+        margin-left: 10px;
+    }
 }
 
 
