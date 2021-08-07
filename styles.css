@@ -246,7 +246,8 @@ nav {
 }
 
 .headerText {
-    width: 60%;
+    width: 70%;
+    margin-left: -40px;
 }
 
 h1 {
@@ -278,7 +279,7 @@ h1 span,
 }
 
 .headerImg {
-    margin-left: -170px;
+    margin-left: -220px;
     width: 30%;
     animation: slide .5s ease-out 1;
 }
@@ -645,10 +646,6 @@ button:focus {
 
 @media (max-width: 1700px) {
 
-    .headerImg {
-        margin-left: -160px;
-    }
-
     .projectHeader h3 {
         font-size: 4rem;
     }
@@ -668,8 +665,7 @@ button:focus {
     }
 
     .headerImg {
-        margin-left: -50px;
-        width: 30%;
+        margin-left: 0px;
     }
 
     .bio {
@@ -688,10 +684,6 @@ button:focus {
 
 @media (max-width: 1250px) {
 
-    .headerContent {
-        justify-content: center;
-    }
-
     h1 {
         font-size: 12rem;
     }
@@ -701,7 +693,7 @@ button:focus {
     }
 
     .headerImg {
-        margin-left: -80px;
+        margin-left: 0px;
     }
 
     .projectImage {
@@ -734,7 +726,7 @@ button:focus {
     }
 
     .headerImg {
-        margin-left: -50px;
+        margin-left: -30px;
     }
 
     .skillsList p {
@@ -785,11 +777,32 @@ button:focus {
         width: 60%;
     }
 
+    .copyright {
+        flex-direction: column;
+    }
+
+    .creditsContainer {
+        margin-top: 20px;
+    }
+
 }
 
 @media (max-width: 970px) {
+
+    h1 {
+        font-size: 9rem;
+    }
+
     .headerImg {
-        margin-left: 10px;
+        margin-left: 20px;
+    }
+
+    h1 span {
+        margin-left: 260px;;
+    }
+
+    .headerText p {
+        font-size: 1.8rem;
     }
 }
 
@@ -842,12 +855,12 @@ button:focus {
 
     .headerText p {
         font-size: 2rem;
-        margin-left: 20px;
-        margin-top: 20px;
+        margin-left: 10px;
+        margin-top: 0px;
     }
 
     .headerImg {
-        margin-left: -30px;
+        margin-left: 10px;
     }
 
     h2 {
@@ -944,7 +957,7 @@ button:focus {
     }
 
     .headerText p {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         margin-left: 10px;
     }
 
@@ -1056,6 +1069,7 @@ button:focus {
         display: flex;
         width: 100%;
         justify-content: center;
+        margin-left: 0px;
     }
 
     .headerText p {
@@ -1074,7 +1088,7 @@ button:focus {
     }
 
     h1 span {
-        margin-left: 200px;
+        margin-left: 180px;
     }
 
     .downIcon {
@@ -1108,6 +1122,19 @@ button:focus {
 
     .contactForm {
         gap: 20px;
+    }
+
+    .email {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .email a {
+        margin-top: 15px;
+    }
+
+    .copyright {
+        margin-top: 20px;
     }
 
 }
@@ -1172,15 +1199,6 @@ button:focus {
         margin-bottom: 20px;
     }
 
-    .email {
-        flex-direction: column;
-        margin-bottom: 20px;
-    }
-
-    .email a {
-        margin-top: 15px;
-    }
-
     .footerMenu {
         font-size: 1.8rem;
         flex-wrap: wrap;
@@ -1196,6 +1214,16 @@ button:focus {
 }
 
 @media (max-width: 350px) {
+
+    h1 {
+        font-size: 4.5rem;
+        margin-right: 70px;
+    }
+
+    h1 span {
+        margin-left: 110px;
+    }
+
     .projectImage {
         height: 150px;
         width: 88%;
