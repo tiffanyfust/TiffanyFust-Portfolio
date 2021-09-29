@@ -1,125 +1,4 @@
 
-// const ul = document.getElementById("projectList");
-// const slides = ul.children;
-// const slideArr = [...slides];
-// let current = 0;
-
-
-// function handleNext(e){
-//     if(e.keyCode === 13){
-//         e.preventDefault(); // Ensure it is only this code that runs
-//         nextSlide();
-//     }
-// }
-
-// function handlePrev(e){
-//     if(e.keyCode === 13){
-//         e.preventDefault(); // Ensure it is only this code that runs
-//         prevSlide();
-//     }
-// }
-
-// function handleDisplay(e){
-//     if(e.keyCode === 13){
-//         e.preventDefault(); // Ensure it is only this code that runs
-//         displayCredits();   
-//     }
-// }
-
-// const nextSlide = () => {
-
-//     slideArr.forEach((el) => {
-//         if (el.classList.contains('current')) {
-//             current = slideArr.indexOf(el);
-//         }
-//     })
-
-//     const el = slideArr[current];
-
-//     let next = el.nextElementSibling;
-//     let nextNext = next.nextElementSibling;
-//     let prev = el.previousElementSibling;
-
-
-//     el.classList.remove('current');
-//     el.classList.remove('nextSlide');
-//     el.classList.remove('hide');
-//     el.classList.add('prevSlide');
-//     el.children[1].children[1].children[0].setAttribute('tabindex', '-1');
-//     el.children[1].children[1].children[1].setAttribute('tabindex', '-1');
-
-//     next.classList.remove('nextSlide');
-//     next.classList.remove('prevSlide');
-//     next.classList.remove('hide');
-//     next.classList.add('current');
-//     next.children[1].children[1].children[0].setAttribute('tabindex', '7');
-//     next.children[1].children[1].children[1].setAttribute('tabindex', '8');
-
-//     if (prev !== null) {
-//         prev.classList.remove('prevSlide');
-//         prev.classList.remove('current');
-//         prev.classList.add('hide');
-//         prev.children[1].children[1].children[0].setAttribute('tabindex', '-1');
-//         prev.children[1].children[1].children[1].setAttribute('tabindex', '-1');
-//     }
-//     if (nextNext !== null) {
-//         nextNext.classList.remove('hide');
-//         nextNext.classList.remove('prevSlide');
-//         nextNext.classList.remove('current');
-//         nextNext.classList.add('nextSlide');
-//         nextNext.children[1].children[1].children[0].setAttribute('tabindex', '-1');
-//         nextNext.children[1].children[1].children[1].setAttribute('tabindex', '-1');
-//     }
-// }
-
-// const prevSlide = () => {
-
-//     slideArr.forEach((el) => {
-//         if (el.classList.contains('current')) {
-//             current = slideArr.indexOf(el);
-//         }
-//     })
-
-//     const el = slideArr[current];
-
-//     let next = el.nextElementSibling;
-//     let prev = el.previousElementSibling;
-//     let prevPrev = prev.previousElementSibling;
-
-    
-//     el.classList.remove('current');
-//     el.classList.remove('prevSlide');
-//     el.classList.remove('hide');
-//     el.classList.add('nextSlide');
-//     el.children[1].children[1].children[0].setAttribute('tabindex', '-1');
-//     el.children[1].children[1].children[1].setAttribute('tabindex', '-1');
-
-//     prev.classList.remove('prevSlide');
-//     prev.classList.remove('nextSlide');
-//     prev.classList.remove('hide');
-//     prev.classList.add('current');
-//     prev.children[1].children[1].children[0].setAttribute('tabindex', '7');
-//     prev.children[1].children[1].children[1].setAttribute('tabindex', '8');
-
-//     if (next !== null) {
-//         next.classList.remove('nextSlide');
-//         next.classList.remove('prevSlide');
-//         next.classList.remove('current');
-//         next.classList.add('hide');
-//         next.children[1].children[1].children[0].setAttribute('tabindex', '-1');
-//         next.children[1].children[1].children[1].setAttribute('tabindex', '-1');
-//     }
-    
-//     if (prevPrev !== null) {
-//         prevPrev.classList.remove('hide');
-//         prevPrev.classList.remove('nextSlide');
-//         prevPrev.classList.remove('current');
-//         prevPrev.classList.add('prevSlide');
-//         prevPrev.children[1].children[1].children[0].setAttribute('tabindex', '-1');
-//         prevPrev.children[1].children[1].children[1].setAttribute('tabindex', '-1');
-//     }
-// }
-
 const credits = document.querySelector('.creditsContainer');
 
 function toggleCredits() {
@@ -237,3 +116,56 @@ panels.forEach(panel => panel.addEventListener('keypress', (e) => handleKeyPress
 projectImg.forEach(image => image.addEventListener('mousemove', hoverImage));
 projectImg.forEach(image => image.addEventListener('mouseover', hoverImage));
 projectImg.forEach(image => image.addEventListener('mouseleave', resetImage));
+
+const handleDarkLight = () => {
+    if (lightDarkIcon.children[0].classList.contains("fa-sun")) {
+        lightDarkIcon.children[0].classList.remove("fa-sun");
+        lightDarkIcon.children[0].classList.add("fa-moon")
+        body.classList.add('lightMode')
+
+        for(i = 0 ; i < h2.length; i++) {
+            h2[i].classList.add('lightMode')
+        }
+
+        for(i = 0; i < links.length; i++) {
+            links[i].classList.add('lightMode');
+        }
+
+        h1.classList.add('lightMode');
+        nav.classList.add('lightMode');
+        headerP.classList.add('lightMode');
+        skillsList.classList.add('lightMode');
+        lightDarkIcon.classList.add('lightMode');
+    } else {
+        lightDarkIcon.children[0].classList.remove("fa-moon");
+        lightDarkIcon.children[0].classList.add("fa-sun")
+        body.classList.remove('lightMode');
+
+        for(i = 0 ; i < h2.length; i++) {
+            h2[i].classList.remove('lightMode')
+        }
+
+        for(i = 0; i < links.length; i++) {
+            links[i].classList.remove('lightMode');
+        }
+
+        h1.classList.remove('lightMode');
+        nav.classList.remove('lightMode');
+        headerP.classList.remove('lightMode');
+        skillsList.classList.remove('lightMode');
+        lightDarkIcon.classList.remove('lightMode');
+    }
+
+}
+
+const body = document.querySelector('body');
+const h2 = document.querySelectorAll('h2');
+const h1 = document.querySelector('h1');
+const links = document.querySelectorAll('a');
+const nav = document.querySelector('nav');
+const headerP = document.querySelector('.headerText');
+const skillsList = document.querySelector('.skillsList');
+
+const lightDarkIcon = document.querySelector('.lightDark');
+
+lightDarkIcon.addEventListener('click', handleDarkLight);

@@ -42,12 +42,13 @@ body {
     background-color: #151515;
     color: #f3eded;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 0 50px;
 }
 
 .menuBtn {
@@ -152,12 +153,13 @@ nav i,
 .headerText p,
 .skillsList p {
     color: #8b8888;
+    transition: color .2s linear;
 }
 
 a:hover,
 a:focus,
 .socialLinks li:hover {
-    color: #e83622;
+    color: #e83622 !important;
 }
 
 a::after {
@@ -193,7 +195,7 @@ a:focus::after,
 /* font sizes */
 
 .info i {
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 nav,
@@ -213,6 +215,45 @@ h3,
 nav i,
 .socialLinks i {
     font-size: 3rem;
+}
+/* #e2d2c4 */
+
+/* Light Dark Mode */
+
+
+.lightDark {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    color:#8b8888;
+    cursor: pointer;
+}
+
+.lightDark i {
+    font-size: 4rem;
+}
+
+body.lightMode {
+    background-color: #e2d2c4;
+    color: #151515;
+}
+
+h1.lightMode {
+    color: #e2d2c4;
+    text-shadow: -10px 10px 0 #151515, 1px 1px 0 #151515, 1px -1px 0 #151515, -1px -1px 0 #151515;
+}
+
+h2.lightMode {
+    color: #e2d2c4;
+    text-shadow: -1px 1px 0 #151515, 1px 1px 0 #151515, 1px -1px 0 #151515, -1px -1px 0 #151515;
+}
+
+a.lightMode,
+nav.lightMode i,
+.headerText.lightMode p,
+.skillsList.lightMode p,
+.lightDark.lightMode {
+    color: #414141;
 }
 
 
@@ -327,6 +368,8 @@ h1 span,
     }
 }
 
+
+
 /* About styling */
 
 .about {
@@ -370,11 +413,6 @@ h1 span,
     height: 1px;
 }
 
-.panel:hover .projectImage,
-.panel:focus .projectImage {
-    display: flex;
-}
-
 .panel.open .projectImage {
     display: flex;
     margin-top: -60px;
@@ -406,16 +444,25 @@ h1 span,
 }
 
 .projectImage {
-    display: none;
+    display: flex;
+    opacity: 1;
     overflow: hidden;
     justify-content: center;
     width: 500px;
     height: 300px;
     position: absolute;
-    right: 10px;
+    right: -900px;
     margin-top: -200px;
     outline: 1px solid #8b8888;
     outline-offset: 20px;
+    transition: opacity .3s ease, right .5s ease-out;
+}
+
+.panel:hover .projectImage,
+.panel:focus .projectImage,
+.panel.open .projectImage {
+    opacity: 1;
+    right: 10px;
 }
 
 .projectImage img {
@@ -473,7 +520,7 @@ h1 span,
     display: flex;
     justify-content: space-between;
     padding-top: 100px;
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 .skillsList {
@@ -519,6 +566,10 @@ h1 span,
 
 /* Contact Styling */
 
+footer {
+    padding-bottom: 50px;
+}
+
 .contact {
     padding-top: 100px;
     margin-top: 100px;
@@ -526,7 +577,6 @@ h1 span,
 
 .contact h3 {
     font-size: 1.8rem;
-    color:#e83622;
 }
 
 .contactContainer {
@@ -556,8 +606,7 @@ h1 span,
     gap: 40px;
 }
 
-input[type="text"],
-input[type="email"],
+input,
 textarea,
 button {
     padding: 10px;
