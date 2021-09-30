@@ -889,6 +889,14 @@ button:focus {
         display: none;
     }
 
+    .menuBtnBurger.lightMode {
+        background-color: #414141;
+    }
+
+    .menuBtnBurger.lightMode::before, .menuBtnBurger.lightMode::after {
+        background-color: #414141;
+    }
+
     .menuBtn {
         display: flex;
         z-index: 3;
@@ -900,6 +908,10 @@ button:focus {
 
     h1 span {
         margin-left: 200px;
+    }
+
+    h1.lightMode {
+        text-shadow: -7px 7px 0 #151515, 1px 1px 0 #151515, 1px -1px 0 #151515, -1px -1px 0 #151515;
     }
 
     .headerText p {
@@ -1190,6 +1202,10 @@ button:focus {
 
 @media (max-width: 430px) {
 
+    .headerContent {
+        height: calc(100vh - 100px);
+    }
+
     h1 {
         font-size: 5rem;
     }
@@ -1198,8 +1214,20 @@ button:focus {
         margin-left: 150px;
     }
 
+    h1.lightMode {
+        text-shadow: -5px 4px 0 #151515, 1px 1px 0 #151515, 1px -1px 0 #151515, -1px -1px 0 #151515;
+    }
+
+    .headerText p {
+        margin-top: -65%;
+    }
+
     h2 {
         font-size: 4rem;
+    }
+
+    .lightDark {
+        z-index: 10;
     }
 
     .bio {
@@ -1215,6 +1243,24 @@ button:focus {
 
     .projectHeader h3 {
         font-size: 2rem;
+        bottom: 40px;
+        left: 50px;
+    }
+
+    .panel.open .projectHeader h3 {
+        animation: slideHeader 1s 1 ease-in forwards;
+    }
+
+    @keyframes slideHeader {
+        35% {
+            bottom: 0;
+            left: 50px;
+        }
+
+        100% {
+            bottom: 0;
+            left: 0;
+        }
     }
 
     .projectImage {

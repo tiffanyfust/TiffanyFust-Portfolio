@@ -132,6 +132,7 @@ const handleDarkLight = () => {
         }
 
         h1.classList.add('lightMode');
+        menuBtnBurger.classList.add('lightMode');
         nav.classList.add('lightMode');
         headerP.classList.add('lightMode');
         skillsList.classList.add('lightMode');
@@ -150,6 +151,7 @@ const handleDarkLight = () => {
         }
 
         h1.classList.remove('lightMode');
+        menuBtnBurger.classList.remove('lightMode');
         nav.classList.remove('lightMode');
         headerP.classList.remove('lightMode');
         skillsList.classList.remove('lightMode');
@@ -161,6 +163,7 @@ const handleDarkLight = () => {
 const body = document.querySelector('body');
 const h2 = document.querySelectorAll('h2');
 const h1 = document.querySelector('h1');
+const menuBtnBurger = document.querySelector('.menuBtnBurger');
 const links = document.querySelectorAll('a');
 const nav = document.querySelector('nav');
 const headerP = document.querySelector('.headerText');
