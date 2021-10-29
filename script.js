@@ -157,7 +157,6 @@ const handleDarkLight = () => {
         skillsList.classList.remove('lightMode');
         lightDarkIcon.classList.remove('lightMode');
     }
-
 }
 
 const body = document.querySelector('body');
@@ -168,7 +167,72 @@ const links = document.querySelectorAll('a');
 const nav = document.querySelector('nav');
 const headerP = document.querySelector('.headerText');
 const skillsList = document.querySelector('.skillsList');
-
 const lightDarkIcon = document.querySelector('.lightDark');
 
 lightDarkIcon.addEventListener('click', handleDarkLight);
+
+
+const header = document.querySelector('header')
+const cursorContainer = document.querySelector('.cursorContainer')
+const headerContent = document.querySelector('.headerContent');
+
+let clientX;
+let clientY;
+let tailLength = [];
+
+const showCursor = (tailLengthArr) => {
+    for (i = 0; i < tailLengthArr.length; i++) {
+        cursorContainer.append(tailLengthArr[i]);
+
+        switch (i) {
+
+            case 0:
+                tailLengthArr[i].classList.add('tail0');
+                break;
+            case 1:
+                tailLengthArr[i].classList.add('tail1');
+                break;
+            case 2:
+                tailLengthArr[i].classList.add('tail2');
+                break;
+            case 3:
+                tailLengthArr[i].classList.add('tail3');
+                break;
+            case 4:
+                tailLengthArr[i].classList.add('tail4');
+                break;
+            case 5:
+                tailLengthArr[i].classList.add('tail5');
+                break;
+        }
+    }
+
+
+    if (cursorContainer.children.length > 6) {
+        const tail = document.querySelector('.tail')
+        tail.remove();
+    }
+
+}
+
+const headerImg = document.querySelector('.headerImg')
+
+const moveCursor = (e) => {
+
+    const cursorTail = document.createElement('div');
+    cursorTail.classList.add('tail');
+    cursorTail.style.top = `${e.clientY - 8}px`;
+    cursorTail.style.left = `${e.clientX - 8}px`;
+
+    tailLength.push(cursorTail);
+    
+    if (tailLength.length > 6) {
+        tailLength.shift();
+    }
+
+    showCursor(tailLength);
+}
+
+
+header.addEventListener('mousemove', (e) => moveCursor(e));
+

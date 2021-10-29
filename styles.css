@@ -368,6 +368,57 @@ h1 span,
     }
 }
 
+/* Header Cursor Styling */
+
+.cursorContainer {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: difference;
+}
+
+.tail {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #f3eded;
+    border-radius: 25px;
+    transition: all 0.1s linear;
+}
+
+.tail5 {
+    height: 15px;
+    width: 15px;
+}
+
+.tail4 {
+    height: 13px;
+    width: 13px;
+}
+
+.tail3 {
+    height: 11px;
+    width: 11px;
+}
+
+.tail2 {
+    height: 9px;
+    width: 9px;
+}
+
+.tail1 {
+    height: 6px;
+    width: 6px;
+}
+
+.tail0 {
+    height: 2px;
+    width: 2px;
+}
+
+
+
 
 
 /* About styling */
@@ -557,7 +608,6 @@ h1 span,
         transform: translateY(-10px);
     }
 
-     
     100% {
         transform:translateY(-15px)
     }
@@ -806,7 +856,6 @@ button:focus {
     }
 
     .projectImage {
-        position: relative;
         outline-offset: 10px;
         margin-left: 100px;
     }
@@ -819,6 +868,7 @@ button:focus {
     .panel.open .projectImage {
         display: flex;
         margin-top: 40px;
+        position: relative;
     }
 
     .projectDescription {
