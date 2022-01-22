@@ -176,63 +176,63 @@ const header = document.querySelector('header')
 const cursorContainer = document.querySelector('.cursorContainer')
 const headerContent = document.querySelector('.headerContent');
 
-let clientX;
-let clientY;
-let tailLength = [];
+// let clientX;
+// let clientY;
+// let tailLength = [];
 
-const showCursor = (tailLengthArr) => {
-    for (i = 0; i < tailLengthArr.length; i++) {
-        cursorContainer.append(tailLengthArr[i]);
+// const showCursor = (tailLengthArr) => {
+//     for (i = 0; i < tailLengthArr.length; i++) {
+//         cursorContainer.append(tailLengthArr[i]);
 
-        switch (i) {
+//         switch (i) {
 
-            case 0:
-                tailLengthArr[i].classList.add('tail0');
-                break;
-            case 1:
-                tailLengthArr[i].classList.add('tail1');
-                break;
-            case 2:
-                tailLengthArr[i].classList.add('tail2');
-                break;
-            case 3:
-                tailLengthArr[i].classList.add('tail3');
-                break;
-            case 4:
-                tailLengthArr[i].classList.add('tail4');
-                break;
-            case 5:
-                tailLengthArr[i].classList.add('tail5');
-                break;
-        }
-    }
+//             case 0:
+//                 tailLengthArr[i].classList.add('tail0');
+//                 break;
+//             case 1:
+//                 tailLengthArr[i].classList.add('tail1');
+//                 break;
+//             case 2:
+//                 tailLengthArr[i].classList.add('tail2');
+//                 break;
+//             case 3:
+//                 tailLengthArr[i].classList.add('tail3');
+//                 break;
+//             case 4:
+//                 tailLengthArr[i].classList.add('tail4');
+//                 break;
+//             case 5:
+//                 tailLengthArr[i].classList.add('tail5');
+//                 break;
+//         }
+//     }
 
 
-    if (cursorContainer.children.length > 6) {
-        const tail = document.querySelector('.tail')
-        tail.remove();
-    }
+//     if (cursorContainer.children.length > 6) {
+//         const tail = document.querySelector('.tail')
+//         tail.remove();
+//     }
 
-}
+// }
 
-const headerImg = document.querySelector('.headerImg')
+// const headerImg = document.querySelector('.headerImg')
 
-const moveCursor = (e) => {
+// const moveCursor = (e) => {
 
-    const cursorTail = document.createElement('div');
-    cursorTail.classList.add('tail');
-    cursorTail.style.top = `${e.clientY - 8}px`;
-    cursorTail.style.left = `${e.clientX - 8}px`;
+//     const cursorTail = document.createElement('div');
+//     cursorTail.classList.add('tail');
+//     cursorTail.style.top = `${e.clientY - 8}px`;
+//     cursorTail.style.left = `${e.clientX - 8}px`;
 
-    tailLength.push(cursorTail);
+//     tailLength.push(cursorTail);
     
-    if (tailLength.length > 6) {
-        tailLength.shift();
-    }
+//     if (tailLength.length > 6) {
+//         tailLength.shift();
+//     }
 
-    showCursor(tailLength);
-}
+//     showCursor(tailLength);
+// }
 
 
-header.addEventListener('mousemove', (e) => moveCursor(e));
+// header.addEventListener('mousemove', (e) => moveCursor(e));
 
