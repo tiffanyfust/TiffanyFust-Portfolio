@@ -234,17 +234,17 @@ nav i,
 }
 
 body.lightMode {
-    background-color: #e2d2c4;
+    background-color: #ffdada;
     color: #151515;
 }
 
 h1.lightMode {
-    color: #e2d2c4;
+    color: #ffdada;
     text-shadow: -10px 10px 0 #151515, 1px 1px 0 #151515, 1px -1px 0 #151515, -1px -1px 0 #151515;
 }
 
 h2.lightMode {
-    color: #e2d2c4;
+    color: #ffdada;
     text-shadow: -1px 1px 0 #151515, 1px 1px 0 #151515, 1px -1px 0 #151515, -1px -1px 0 #151515;
 }
 
